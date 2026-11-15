@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dedica — Regalos personalizados para boda, bautizo, confirmación y empresas · Guadalajara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marfil:#F5F1EB; --marfil2:#ECE6DC;
+  --carbon:#1F2124; --carbon2:#34373C;
+  --salvia:#4A6358; --salvia2:#5E7A6D; --salvia-cl:#E3EAE5;
+  --durazno:#E9B9A2; --durazno2:#F4D9CB;
+  --dorado:#C9A96E;
+  --gris:#8B877E; --linea:#D8D1C5;
+  --rojo:#B5503C;
+  --fd:'Instrument Serif',serif; --fb:'Figtree',sans-serif; --fs:'Pinyon Script',cursive;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);background:var(--marfil);color:var(--carbon);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit;}
+:focus-visible{outline:2.5px solid var(--dorado);outline-offset:3px;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+.em{font-style:italic;color:var(--salvia);}
+
+/* ═══ BARRA SUPERIOR ═══ */
+.top{background:var(--carbon);color:var(--marfil);font-size:12.5px;letter-spacing:.03em;padding:9px 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.top b{color:var(--durazno);font-weight:600;}
+
+/* ═══ NAV ═══ */
+.nav{position:sticky;top:0;z-index:70;background:rgba(245,241,235,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.nav-in{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.logo{font-family:var(--fd);font-size:30px;letter-spacing:-.01em;line-height:1;}
+.logo i{font-style:italic;color:var(--salvia);}
+.nav-links{display:flex;gap:26px;font-size:13.5px;font-weight:500;}
+.nav-links a{padding:4px 0;border-bottom:1.5px solid transparent;transition:.2s;}
+.nav-links a:hover{border-color:var(--dorado);}
+.cart-btn{display:flex;align-items:center;gap:9px;background:var(--carbon);color:var(--marfil);border:none;padding:11px 18px;font-size:13px;font-weight:600;cursor:pointer;border-radius:999px;transition:background .2s;}
+.cart-btn:hover{background:var(--salvia);}
+.cart-btn .cn{background:var(--durazno);color:var(--carbon);min-width:20px;height:20px;border-radius:999px;display:grid;place-items:center;font-size:11px;font-weight:700;padding:0 6px;}
+.burger{display:none;background:none;border:1px solid var(--linea);padding:8px 12px;font-size:12px;font-weight:600;cursor:pointer;border-radius:999px;}
+
+/* ═══ HERO + DEDICATORIA EN VIVO ═══ */
+.hero{padding:64px 0 56px;}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--salvia);font-weight:600;margin-bottom:18px;}
+.eyebrow::before{content:'';width:26px;height:1.5px;background:var(--dorado);}
+h1,h2,h3{font-family:var(--fd);font-weight:400;line-height:1.05;letter-spacing:-.01em;}
+.hero h1{font-size:clamp(44px,6.4vw,82px);margin-bottom:20px;}
+.hero p.lead{font-size:17px;color:var(--carbon2);max-width:520px;margin-bottom:28px;}
+.eventos{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+.ev{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--linea);padding:11px 16px;border-radius:999px;font-size:13.5px;font-weight:600;cursor:pointer;transition:.2s;}
+.ev:hover{border-color:var(--salvia);transform:translateY(-2px);}
+.ev .ic{font-size:16px;}
+.hero-note{font-size:13px;color:var(--gris);}
+.hero-note b{color:var(--carbon);font-weight:600;}
+
+/* tarjeta de prueba */
+.trial{background:#fff;border:1px solid var(--linea);border-radius:18px;padding:22px;box-shadow:0 20px 50px rgba(31,33,36,.08);}
+.trial-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
+.trial-h span{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--salvia);font-weight:600;}
+.trial-h small{font-size:12px;color:var(--gris);}
+.placa{position:relative;border-radius:14px;aspect-ratio:4/2.6;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:22px;overflow:hidden;transition:background .4s,color .4s;}
+.placa.madera{background:linear-gradient(135deg,#B98A5E,#8E6440);color:#FBF4EA;}
+.placa.negro{background:linear-gradient(135deg,#2A2C31,#15171A);color:#EADFC9;}
+.placa.blanco{background:linear-gradient(135deg,#FFFFFF,#F0EAE0);color:#3A3D43;border:1px solid var(--linea);}
+.placa.salvia{background:linear-gradient(135deg,#5E7A6D,#3E554B);color:#F3EEE6;}
+.placa::after{content:'';position:absolute;inset:10px;border:1px solid currentColor;opacity:.35;border-radius:10px;pointer-events:none;}
+.placa .nombres{font-family:var(--fs);font-size:clamp(30px,4.2vw,46px);line-height:1;margin-bottom:8px;word-break:break-word;}
+.placa .fecha{font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.85;margin-bottom:8px;}
+.placa .frase{font-family:var(--fd);font-style:italic;font-size:15px;opacity:.9;max-width:28ch;}
+.trial-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;}
+.trial-fields .full{grid-column:1/-1;}
+.fld label{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gris);font-weight:600;margin-bottom:5px;}
+.fld input,.fld select,.fld textarea{width:100%;padding:11px 13px;border:1px solid var(--linea);border-radius:10px;background:var(--marfil);font-size:14.5px;}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--salvia);background:#fff;}
+.swatches{display:flex;gap:8px;}
+.sw{width:30px;height:30px;border-radius:50%;border:2px solid transparent;cursor:pointer;position:relative;}
+.sw.on{border-color:var(--carbon);}
+.sw.madera{background:linear-gradient(135deg,#B98A5E,#8E6440);}
+.sw.negro{background:#1B1D21;}
+.sw.blanco{background:#F4EFE7;box-shadow:inset 0 0 0 1px var(--linea);}
+.sw.salvia{background:#4A6358;}
+.trial-cta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;font-size:13px;color:var(--gris);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;font-size:13.5px;font-weight:600;border-radius:999px;border:none;cursor:pointer;transition:.2s;}
+.btn-p{background:var(--salvia);color:#fff;}
+.btn-p:hover{background:var(--carbon);}
+.btn-o{background:#fff;border:1px solid var(--linea);}
+.btn-o:hover{border-color:var(--carbon);}
+
+/* ═══ CINTA ═══ */
+.ticker{background:var(--salvia);color:var(--marfil);overflow:hidden;white-space:nowrap;padding:12px 0;}
+.ticker-track{display:inline-block;animation:tk 32s linear infinite;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;}
+.ticker-track span{margin:0 26px;}
+.ticker-track span::after{content:'✦';margin-left:26px;color:var(--durazno);}
+@keyframes tk{to{transform:translateX(-50%)}}
+
+/* ═══ FILTROS + CATÁLOGO ═══ */
+section{padding:72px 0;}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:30px;}
+h2{font-size:clamp(32px,4.4vw,52px);}
+.sub{font-size:15px;color:var(--carbon2);max-width:52ch;}
+.filtros{position:sticky;top:63px;z-index:60;background:var(--marfil);padding:12px 0;display:flex;gap:8px;overflow-x:auto;border-bottom:1px solid var(--linea);margin-bottom:28px;}
+.f{background:#fff;border:1px solid var(--linea);padding:9px 16px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.2s;}
+.f:hover{border-color:var(--carbon);}
+.f.on{background:var(--carbon);color:var(--marfil);border-color:var(--carbon);}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.card{background:#fff;border:1px solid var(--linea);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(31,33,36,.1);}
+.card-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--marfil2);}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1);}
+.card:hover .card-img img{transform:scale(1.05);}
+.card-ev{position:absolute;top:12px;left:12px;background:rgba(245,241,235,.95);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:6px 10px;border-radius:999px;color:var(--salvia);}
+.card-badge{position:absolute;top:12px;right:12px;background:var(--durazno);color:var(--carbon);font-size:11px;font-weight:700;padding:6px 10px;border-radius:999px;}
+.card-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1;}
+.card h3{font-size:24px;line-height:1.1;}
+.card p{font-size:13.5px;color:var(--carbon2);}
+.specs{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--gris);margin-top:4px;}
+.specs b{color:var(--carbon);font-weight:600;}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px;}
+.price{font-family:var(--fd);font-size:26px;}
+.price small{font-family:var(--fb);font-size:12px;color:var(--gris);}
+.card .btn{padding:11px 18px;font-size:13px;}
+
+/* ═══ CÓMO FUNCIONA ═══ */
+.how{background:var(--carbon);color:var(--marfil);}
+.how h2{color:var(--marfil);}
+.how .sub{color:#C8C3B9;}
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(245,241,235,.14);margin-top:36px;border-radius:16px;overflow:hidden;}
+.paso{background:var(--carbon);padding:28px 24px;}
+.paso-n{font-family:var(--fd);font-style:italic;font-size:34px;color:var(--durazno);line-height:1;margin-bottom:14px;}
+.paso h3{font-size:22px;margin-bottom:8px;color:var(--marfil);}
+.paso p{font-size:14px;color:#B9B3A8;}
+
+/* ═══ GARANTÍAS ═══ */
+.gar{background:var(--marfil2);}
+.gar-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:36px;}
+.g{background:#fff;border:1px solid var(--linea);border-radius:16px;padding:26px 24px;display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;}
+.g-ic{width:48px;height:48px;border-radius:14px;background:var(--salvia-cl);display:grid;place-items:center;font-size:22px;}
+.g h3{font-size:22px;margin-bottom:6px;}
+.g p{font-size:14px;color:var(--carbon2);}
+.pagos{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;}
+.pago{background:#fff;border:1px solid var(--linea);padding:9px 14px;border-radius:999px;font-size:13px;font-weight:600;}
+
+/* ═══ RESEÑAS ═══ */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;}
+.rc{background:#fff;border:1px solid var(--linea);border-radius:16px;padding:24px;}
+.rc .stars{color:var(--dorado);letter-spacing:2px;margin-bottom:10px;}
+.rc p{font-family:var(--fd);font-size:19px;line-height:1.35;margin-bottom:14px;}
+.rc .who{font-size:13px;font-weight:600;}
+.rc .who span{display:block;font-weight:400;color:var(--gris);font-size:12px;}
+
+/* ═══ CONTACTO ═══ */
+.ct-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:start;margin-top:30px;}
+.dt{display:grid;grid-template-columns:110px 1fr;gap:10px;padding:13px 0;border-top:1px solid var(--linea);font-size:14.5px;}
+.dt:last-of-type{border-bottom:1px solid var(--linea);}
+.dt-k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--salvia);font-weight:600;padding-top:3px;}
+.wa-box{background:var(--salvia);color:#fff;border-radius:18px;padding:30px 26px;}
+.wa-box h3{font-size:28px;margin-bottom:10px;}
+.wa-box p{font-size:14px;color:#DCE5DF;margin-bottom:22px;}
+.wa{display:flex;align-items:center;justify-content:center;gap:9px;background:#25D366;color:#062e13;padding:15px;font-size:14px;font-weight:700;border-radius:999px;transition:transform .18s;}
+.wa:hover{transform:translateY(-2px);}
+footer{padding:30px 24px;border-top:1px solid var(--linea);font-size:12.5px;color:var(--gris);}
+.foot-in{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+footer a{color:var(--salvia);font-weight:600;}
+
+/* ═══ CARRITO ═══ */
+.ov{position:fixed;inset:0;background:rgba(31,33,36,.5);z-index:150;opacity:0;pointer-events:none;transition:opacity .3s;}
+.ov.on{opacity:1;pointer-events:auto;}
+.dr{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--marfil);z-index:160;transform:translateX(100%);transition:transform .38s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;}
+.dr.on{transform:none;}
+.dr-h{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid var(--linea);}
+.dr-h h2{font-size:30px;}
+.x{background:none;border:none;font-size:28px;cursor:pointer;line-height:1;}
+.dr-b{flex:1;overflow-y:auto;padding:6px 24px;}
+.empty{text-align:center;color:var(--gris);padding:60px 10px;font-size:14px;}
+.ci{display:grid;grid-template-columns:64px 1fr auto;gap:14px;padding:18px 0;border-bottom:1px solid var(--linea);}
+.ci img{width:64px;height:64px;object-fit:cover;border-radius:10px;}
+.ci-n{font-weight:600;font-size:15px;}
+.ci-p{font-size:12.5px;color:var(--gris);margin-top:4px;line-height:1.45;}
+.ci-p b{color:var(--carbon);font-weight:600;}
+.ci-q{display:inline-flex;align-items:center;gap:10px;margin-top:8px;}
+.ci-q button{width:26px;height:26px;border:1px solid var(--linea);background:#fff;border-radius:50%;cursor:pointer;}
+.ci-q span{font-size:13px;min-width:28px;text-align:center;font-weight:600;}
+.ci-r{text-align:right;}
+.ci-t{font-weight:700;white-space:nowrap;}
+.ci-x{background:none;border:none;color:var(--gris);cursor:pointer;font-size:18px;margin-top:6px;}
+.dr-f{border-top:1px solid var(--linea);padding:18px 24px 22px;background:#fff;}
+.tot{display:flex;justify-content:space-between;font-size:14px;padding:5px 0;color:var(--carbon2);}
+.tot.big{font-size:16px;font-weight:700;color:var(--carbon);border-top:1px solid var(--linea);margin-top:6px;padding-top:12px;}
+.tot .hint{font-size:12px;color:var(--gris);}
+.dr-f .btn{width:100%;margin-top:12px;}
+
+/* ═══ MODALES ═══ */
+.md{position:fixed;inset:0;z-index:170;display:none;align-items:flex-start;justify-content:center;padding:30px 16px;overflow-y:auto;background:rgba(31,33,36,.55);}
+.md.on{display:flex;}
+.mc{background:var(--marfil);width:min(680px,100%);border-radius:20px;overflow:hidden;}
+.mc-h{background:var(--carbon);color:var(--marfil);padding:16px 22px;display:flex;justify-content:space-between;align-items:center;}
+.mc-h h2{font-size:26px;color:var(--marfil);}
+.mc-h .x{color:var(--marfil);}
+.mc-b{padding:22px;}
+.pz-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.pz-left img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;margin-bottom:12px;}
+.pz-left .placa{aspect-ratio:4/2.4;}
+.pz-left .placa .nombres{font-size:clamp(24px,3vw,34px);}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.fld{margin-bottom:12px;}
+.qty{display:flex;align-items:center;gap:0;border:1px solid var(--linea);border-radius:10px;overflow:hidden;background:var(--marfil);}
+.qty button{width:42px;height:42px;border:none;background:#fff;cursor:pointer;font-size:18px;}
+.qty input{flex:1;text-align:center;border:none;background:transparent;font-weight:600;}
+.qty input:focus{outline:none;}
+.minimo{font-size:11.5px;color:var(--gris);margin-top:4px;}
+.desc-vol{font-size:12px;color:var(--salvia);font-weight:600;margin-top:4px;min-height:16px;}
+.pz-total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--linea);padding-top:14px;margin-top:6px;}
+.pz-total span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gris);}
+.pz-total b{font-family:var(--fd);font-size:30px;font-weight:400;}
+.mc-b .btn{width:100%;margin-top:8px;}
+.seg{display:flex;border:1px solid var(--linea);border-radius:10px;overflow:hidden;}
+.seg button{flex:1;background:#fff;border:none;padding:11px 6px;font-size:12.5px;font-weight:600;cursor:pointer;transition:.15s;}
+.seg button.on{background:var(--salvia);color:#fff;}
+.hint-p{font-size:12px;color:var(--gris);margin-top:5px;}
+.warn{background:#FBECE8;border:1px solid #F0C8BE;color:var(--rojo);font-size:13px;padding:11px 14px;border-radius:10px;margin:8px 0 12px;display:none;}
+.warn.on{display:block;}
+.resumen{background:#fff;border:1px solid var(--linea);border-radius:12px;padding:14px 16px;margin:10px 0 14px;font-size:13.5px;}
+.resumen .r{display:flex;justify-content:space-between;padding:4px 0;}
+.resumen .r.b{border-top:1px solid var(--linea);margin-top:6px;padding-top:8px;font-weight:700;}
+
+/* tracking */
+.trk{text-align:center;padding:4px;}
+.trk-n{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--salvia);font-weight:600;}
+.trk-e{font-size:46px;margin:8px 0;}
+.trk h3{font-size:30px;margin-bottom:6px;}
+.trk p{font-size:14px;color:var(--carbon2);max-width:40ch;margin:0 auto 24px;}
+.steps{display:flex;justify-content:space-between;margin-bottom:22px;padding:0 4px;}
+.st{flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;position:relative;}
+.st::before{content:'';position:absolute;top:7px;left:-50%;width:100%;height:2px;background:var(--linea);}
+.st:first-child::before{display:none;}
+.st.on::before,.st.done::before{background:var(--salvia);}
+.st .d{width:16px;height:16px;border-radius:50%;background:var(--linea);border:3px solid var(--marfil);box-shadow:0 0 0 1px var(--linea);z-index:1;}
+.st.on .d,.st.done .d{background:var(--salvia);box-shadow:0 0 0 1px var(--salvia);}
+.st.on .d{animation:pl 1.6s infinite;}
+@keyframes pl{0%,100%{box-shadow:0 0 0 1px var(--salvia)}50%{box-shadow:0 0 0 6px rgba(74,99,88,.18)}}
+.st .l{font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--gris);text-align:center;}
+.st.on .l,.st.done .l{color:var(--salvia);font-weight:600;}
+.trk .wa{margin-top:6px;}
+.trk .btn-o{width:100%;margin-top:10px;}
+.anticipo-box{background:var(--durazno2);border-radius:12px;padding:14px;font-size:13.5px;margin-bottom:16px;text-align:left;}
+.anticipo-box b{display:block;font-size:15px;margin-bottom:2px;}
+
+/* ═══ TOAST / MÓVIL ═══ */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(140%);background:var(--carbon);color:var(--marfil);padding:13px 22px;border-radius:999px;font-size:13.5px;z-index:300;transition:transform .3s;white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis;}
+.toast.on{transform:translateX(-50%) translateY(0);}
+.mm{position:fixed;inset:0;z-index:180;background:var(--carbon);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;opacity:0;pointer-events:none;transition:opacity .3s;}
+.mm.on{opacity:1;pointer-events:auto;}
+.mm a{color:var(--marfil);font-family:var(--fd);font-size:34px;}
+.mm button{position:absolute;top:20px;right:22px;background:none;border:1px solid rgba(245,241,235,.4);color:var(--marfil);padding:8px 14px;border-radius:999px;cursor:pointer;font-size:12px;}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:960px){
+  .nav-links{display:none;} .burger{display:block;}
+  .cart-btn .txt{display:none;}
+  .hero{padding:40px 0;} .hero-grid{grid-template-columns:1fr;gap:34px;}
+  .grid{grid-template-columns:1fr 1fr;}
+  .pasos{grid-template-columns:1fr 1fr;}
+  .gar-grid,.rev-grid{grid-template-columns:1fr;}
+  .ct-grid{grid-template-columns:1fr;gap:30px;}
+  .pz-grid{grid-template-columns:1fr;}
+  section{padding:56px 0;}
+}
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr;}
+  .pasos{grid-template-columns:1fr;}
+  .trial-fields,.f2{grid-template-columns:1fr;}
+  .steps{padding:0;} .st .l{font-size:9.5px;}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <span>🎁 <b>Temporada de bodas y posadas:</b> aparta tu pedido con 3 semanas de anticipación</span>
+  <span>Lun–Sáb 10:00–19:00 · Guadalajara</span>
+</div>
+
+<div class="nav">
+  <div class="nav-in">
+    <a href="#top" class="logo">Ded<i>ica</i></a>
+    <nav class="nav-links">
+      <a href="#regalos">Regalos</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#garantias">Tu pago seguro</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <button class="cart-btn" onclick="openCart()">🎁 <span class="txt">Mi pedido</span><span class="cn" id="cn">0</span></button>
+      <button class="burger" onclick="document.getElementById('mm').classList.add('on')">Menú</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Regalos personalizados · Guadalajara</div>
+      <h1>Regalos que llevan <span class="em">su nombre.</span></h1>
+      <p class="lead">Recuerdos para boda, bautizo, confirmación y regalos empresariales, grabados o impresos a mano con los nombres, la fecha y la frase que tú elijas.</p>
+      <div class="eventos">
+        <button class="ev" onclick="irEvento('boda')"><span class="ic">💍</span>Boda</button>
+        <button class="ev" onclick="irEvento('bautizo')"><span class="ic">🕊️</span>Bautizo</button>
+        <button class="ev" onclick="irEvento('confirmacion')"><span class="ic">✨</span>Confirmación</button>
+        <button class="ev" onclick="irEvento('empresarial')"><span class="ic">🏢</span>Empresarial</button>
+      </div>
+      <p class="hero-note"><b>Antes de producir te enviamos el diseño digital</b> para que lo apruebes. Nada se graba sin tu visto bueno.</p>
+    </div>
+
+    <div class="trial">
+      <div class="trial-h"><span>Prueba tu dedicatoria</span><small>se actualiza mientras escribes</small></div>
+      <div class="placa madera" id="placa-demo">
+        <div class="nombres" id="pd-n">Ana &amp; Diego</div>
+        <div class="fecha" id="pd-f">14 · Febrero · 2026</div>
+        <div class="frase" id="pd-p">Gracias por acompañarnos</div>
+      </div>
+      <div class="trial-fields">
+        <div class="fld full"><label>Nombres</label><input id="t-n" value="Ana & Diego" maxlength="40" oninput="demoPreview()"></div>
+        <div class="fld"><label>Fecha del evento</label><input id="t-f" type="date" value="2026-02-14" oninput="demoPreview()"></div>
+        <div class="fld"><label>Acabado</label>
+          <div class="swatches" style="padding-top:6px">
+            <button class="sw madera on" data-a="madera" onclick="demoAcabado(this)" aria-label="Madera"></button>
+            <button class="sw negro" data-a="negro" onclick="demoAcabado(this)" aria-label="Negro"></button>
+            <button class="sw blanco" data-a="blanco" onclick="demoAcabado(this)" aria-label="Blanco"></button>
+            <button class="sw salvia" data-a="salvia" onclick="demoAcabado(this)" aria-label="Salvia"></button>
+          </div>
+        </div>
+        <div class="fld full"><label>Frase</label><input id="t-p" value="Gracias por acompañarnos" maxlength="60" oninput="demoPreview()"></div>
+      </div>
+      <div class="trial-cta">
+        <span>¿Te gusta? Elige en qué regalo va.</span>
+        <a href="#regalos" class="btn btn-p">Ver regalos →</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Diseño digital antes de producir</span><span>Anticipo del 50%</span><span>Pedidos desde 12 piezas</span><span>Envío a todo México</span><span>Hecho en Guadalajara</span>
+    <span>Diseño digital antes de producir</span><span>Anticipo del 50%</span><span>Pedidos desde 12 piezas</span><span>Envío a todo México</span><span>Hecho en Guadalajara</span>
+  </div>
+</div>
+
+<!-- ═══ CATÁLOGO ═══ -->
+<section id="regalos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Catálogo</div>
+        <h2>Elige el regalo, <span class="em">nosotros lo hacemos tuyo.</span></h2>
+      </div>
+      <p class="sub">Precios por pieza. Entre más piezas, mejor precio: 5% de descuento desde 50 y 10% desde 100.</p>
+    </div>
+    <div class="filtros" id="filtros">
+      <button class="f on" data-e="todo" onclick="filtrar('todo',this)">Todos</button>
+      <button class="f" data-e="boda" onclick="filtrar('boda',this)">💍 Boda</button>
+      <button class="f" data-e="bautizo" onclick="filtrar('bautizo',this)">🕊️ Bautizo</button>
+      <button class="f" data-e="confirmacion" onclick="filtrar('confirmacion',this)">✨ Confirmación</button>
+      <button class="f" data-e="empresarial" onclick="filtrar('empresarial',this)">🏢 Empresarial</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- ═══ CÓMO FUNCIONA ═══ -->
+<section class="how" id="como">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--durazno)">Cómo funciona</div>
+    <h2>Del pedido a la mesa de regalos, <span class="em" style="color:var(--durazno)">sin sorpresas.</span></h2>
+    <p class="sub">Así trabajamos cada pedido, sea de 12 piezas o de 300.</p>
+    <div class="pasos">
+      <div class="paso"><div class="paso-n">1</div><h3>Eliges y personalizas</h3><p>Escoges el regalo, la cantidad, los nombres, la fecha y la frase. Ves la vista previa al momento.</p></div>
+      <div class="paso"><div class="paso-n">2</div><h3>Apruebas el diseño</h3><p>En 24 horas te mandamos el diseño digital por WhatsApp. Si quieres cambiar algo, se cambia. Nada se produce sin tu "sí".</p></div>
+      <div class="paso"><div class="paso-n">3</div><h3>Pagas el 50%</h3><p>Con el diseño aprobado pagas el anticipo por transferencia o tarjeta. El resto lo pagas cuando recibes tu pedido.</p></div>
+      <div class="paso"><div class="paso-n">4</div><h3>Lo recibes a tiempo</h3><p>Recoges en el taller, te lo llevamos en Guadalajara o lo enviamos por paquetería a cualquier parte de México.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GARANTÍAS ═══ -->
+<section class="gar" id="garantias">
+  <div class="wrap">
+    <div class="eyebrow">Tu pago seguro</div>
+    <h2>Pagar por adelantado <span class="em">da nervio.</span> Así te cuidamos.</h2>
+    <p class="sub">Sabemos que un regalo personalizado se paga antes de verlo. Por eso cada paso deja constancia.</p>
+    <div class="gar-grid">
+      <div class="g"><div class="g-ic">🖼️</div><div><h3>Ves el diseño antes de pagar</h3><p>Primero apruebas la vista digital de tu regalo con nombres y fecha. El anticipo se paga después, no antes.</p></div></div>
+      <div class="g"><div class="g-ic">💳</div><div><h3>Solo el 50% por adelantado</h3><p>El resto lo pagas cuando tienes el pedido en tus manos. Si pagas con tarjeta, tu banco te protege además con el contracargo.</p></div></div>
+      <div class="g"><div class="g-ic">🧾</div><div><h3>Número de pedido y seguimiento</h3><p>Cada pedido tiene su folio y puedes ver en qué va: diseño, producción, envío. Te mandamos foto del pedido terminado antes de enviarlo.</p></div></div>
+      <div class="g"><div class="g-ic">🔁</div><div><h3>Si el error es nuestro, lo reponemos</h3><p>Nombre mal escrito o fecha equivocada respecto al diseño que aprobaste: se rehace sin costo. Por eso insistimos en que revises bien el diseño.</p></div></div>
+    </div>
+    <div class="pagos">
+      <span class="pago">🏦 Transferencia SPEI</span>
+      <span class="pago">💳 Tarjeta de crédito o débito</span>
+      <span class="pago">🧾 Comprobante por cada pago</span>
+      <span class="pago">📄 Factura disponible</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESEÑAS ═══ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Lo que dicen</div>
+    <h2>Regalos que <span class="em">sí se quedaron.</span></h2>
+    <div class="rev-grid">
+      <div class="rc"><div class="stars">★★★★★</div><p>"Pedí 120 velas para mi boda. Me mandaron el diseño, corregí una letra del apellido y en una semana las tenía. Nadie las dejó en la mesa."</p><div class="who">Mariana G.<span>Boda · Zapopan</span></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p>"Las cajas para los padrinos de mi hijo quedaron hermosas. Me gustó que primero pagué la mitad y vi fotos antes de que me las mandaran."</p><div class="who">Luis y Fernanda<span>Bautizo · Tlaquepaque</span></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p>"Termos con el logo para 40 empleados, con factura y en tiempo. Ya les pedí los regalos de fin de año."</p><div class="who">Recursos Humanos<span>Empresa de logística · GDL</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACTO ═══ -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="eyebrow">Contacto</div>
+    <h2>¿Un pedido especial o <span class="em">muchas piezas?</span></h2>
+    <div class="ct-grid">
+      <div>
+        <p class="sub" style="margin-bottom:22px">Si necesitas algo que no está en el catálogo, cotización para más de 200 piezas o un diseño desde cero, escríbenos y lo armamos contigo.</p>
+        <div class="dt"><div class="dt-k">Taller</div><div>Col. Americana, Guadalajara · Visitas con cita</div></div>
+        <div class="dt"><div class="dt-k">Horario</div><div>Lunes a sábado · 10:00 – 19:00</div></div>
+        <div class="dt"><div class="dt-k">Entregas</div><div>GDL y Zapopan a domicilio · Paquetería a todo México</div></div>
+        <div class="dt"><div class="dt-k">Redes</div><div>@dedica.regalos</div></div>
+      </div>
+      <div class="wa-box">
+        <h3>Escríbenos por WhatsApp</h3>
+        <p>Mándanos fotos de lo que tienes en mente, tu fecha y cuántas piezas necesitas. Te respondemos en horario de taller.</p>
+        <a class="wa wa-link" href="#" target="_blank" rel="noopener">💬 Cotizar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <span>© 2025 Dedica · Regalos personalizados · Guadalajara</span>
+    <span>Diseño web por <a href="#">NovaSite Digital</a></span>
+  </div>
+</footer>
+
+<!-- ═══ CARRITO ═══ -->
+<div class="ov" id="ov" onclick="closeCart()"></div>
+<aside class="dr" id="dr" aria-label="Mi pedido">
+  <div class="dr-h"><h2>Mi pedido</h2><button class="x" onclick="closeCart()" aria-label="Cerrar">×</button></div>
+  <div class="dr-b" id="dr-b"></div>
+  <div class="dr-f" id="dr-f" style="display:none">
+    <div class="tot"><span>Subtotal</span><span id="t-sub">$0</span></div>
+    <div class="tot"><span>Anticipo hoy (50%) <span class="hint">· tras aprobar diseño</span></span><span id="t-ant">$0</span></div>
+    <div class="tot"><span>Resto al recibir</span><span id="t-res">$0</span></div>
+    <button class="btn btn-p" onclick="abrirCheckout()">Continuar con mis datos →</button>
+  </div>
+</aside>
+
+<!-- ═══ MODAL PERSONALIZAR ═══ -->
+<div class="md" id="md-pz">
+  <div class="mc">
+    <div class="mc-h"><h2 id="pz-title">Personalizar</h2><button class="x" onclick="cerrarPz()" aria-label="Cerrar">×</button></div>
+    <div class="mc-b">
+      <div class="pz-grid">
+        <div class="pz-left">
+          <img id="pz-img" src="" alt="">
+          <div class="placa madera" id="pz-placa">
+            <div class="nombres" id="pz-n">Nombres</div>
+            <div class="fecha" id="pz-f">Fecha</div>
+            <div class="frase" id="pz-p">Frase</div>
+          </div>
+          <p class="hint-p" style="text-align:center;margin-top:8px">Vista previa aproximada. El diseño final te lo enviamos para aprobar.</p>
+        </div>
+        <div>
+          <div class="fld"><label>Cantidad</label>
+            <div class="qty"><button onclick="pzQty(-1)">−</button><input id="pz-q" type="number" min="1" oninput="pzCalc()"><button onclick="pzQty(1)">+</button></div>
+            <div class="minimo" id="pz-min"></div>
+            <div class="desc-vol" id="pz-desc"></div>
+          </div>
+          <div class="fld" id="w-n"><label id="l-n">Nombres</label><input id="i-n" maxlength="40" placeholder="Ej. Ana & Diego" oninput="pzPreview()"></div>
+          <div class="f2">
+            <div class="fld" id="w-f"><label>Fecha del evento</label><input id="i-f" type="date" oninput="pzPreview()"></div>
+            <div class="fld"><label>Acabado</label>
+              <select id="i-a" onchange="pzPreview();pzCalc()">
+                <option value="madera">Madera natural</option>
+                <option value="negro">Negro mate</option>
+                <option value="blanco">Blanco marfil</option>
+                <option value="salvia">Verde salvia</option>
+              </select>
+            </div>
+          </div>
+          <div class="fld"><label>Frase</label>
+            <select id="i-ps" onchange="pzFrase()">
+              <option>Gracias por acompañarnos</option>
+              <option>Con cariño, para ti</option>
+              <option>Gracias por ser parte de este día</option>
+              <option>Un recuerdo de nuestro amor</option>
+              <option>Gracias por guiarme en mi fe</option>
+              <option>Gracias por formar parte del equipo</option>
+              <option value="custom">Escribir mi propia frase…</option>
+            </select>
+            <input id="i-p" maxlength="60" placeholder="Tu frase (máx. 60 caracteres)" style="margin-top:8px;display:none" oninput="pzPreview()">
+          </div>
+          <div class="fld"><label>Notas para el taller (opcional)</label><textarea id="i-notas" rows="2" placeholder="Colores de la boda, tipografía que te gusta, logo, etc."></textarea></div>
+          <div class="pz-total"><span>Total de esta pieza</span><b id="pz-total">$0</b></div>
+          <button class="btn btn-p" onclick="agregarAlPedido()">Agregar a mi pedido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL CHECKOUT ═══ -->
+<div class="md" id="md-co">
+  <div class="mc">
+    <div class="mc-h"><h2>Tus datos</h2><button class="x" onclick="cerrarCheckout()" aria-label="Cerrar">×</button></div>
+    <div class="mc-b">
+      <div class="f2">
+        <div class="fld"><label>Nombre completo</label><input id="c-nom" placeholder="¿A nombre de quién va?"></div>
+        <div class="fld"><label>WhatsApp</label><input id="c-tel" inputmode="numeric" placeholder="10 dígitos"></div>
+      </div>
+      <div class="f2">
+        <div class="fld"><label>Fecha del evento</label><input id="c-fecha" type="date" oninput="checkFecha()"></div>
+        <div class="fld"><label>Tipo de evento</label>
+          <select id="c-ev"><option value="boda">Boda</option><option value="bautizo">Bautizo</option><option value="confirmacion">Confirmación</option><option value="empresarial">Empresarial</option><option value="otro">Otro</option></select>
+        </div>
+      </div>
+      <div class="warn" id="c-warn"></div>
+
+      <div class="fld"><label>¿Cómo lo recibes?</label>
+        <div class="seg" id="seg-ent">
+          <button type="button" class="on" data-v="taller" data-c="0" onclick="segPick('seg-ent',this)">Recoger en taller<br><small>Gratis</small></button>
+          <button type="button" data-v="gdl" data-c="99" onclick="segPick('seg-ent',this)">A domicilio GDL<br><small>$99</small></button>
+          <button type="button" data-v="paq" data-c="189" onclick="segPick('seg-ent',this)">Paquetería nacional<br><small>$189</small></button>
+        </div>
+      </div>
+      <div id="c-dir-wrap" style="display:none">
+        <div class="fld"><label>Calle y número</label><input id="c-calle" placeholder="Ej. Av. Chapultepec 180, Int. 4"></div>
+        <div class="f2">
+          <div class="fld"><label>Colonia</label><input id="c-col"></div>
+          <div class="fld"><label>Ciudad y C.P.</label><input id="c-cd" placeholder="Ej. Zapopan, 45010"></div>
+        </div>
+      </div>
+
+      <div class="fld"><label>¿Cómo pagarás el anticipo?</label>
+        <div class="seg" id="seg-pago">
+          <button type="button" class="on" data-v="transferencia" onclick="segPick('seg-pago',this)">Transferencia SPEI</button>
+          <button type="button" data-v="tarjeta" onclick="segPick('seg-pago',this)">Tarjeta (link de pago)</button>
+        </div>
+        <div class="hint-p" id="pago-hint">Te enviamos la CLABE junto con el diseño para aprobar. Pagas cuando lo apruebes.</div>
+      </div>
+
+      <div class="resumen" id="c-res"></div>
+      <button class="btn btn-p" onclick="confirmarPedido()">Confirmar pedido →</button>
+      <p class="hint-p" style="text-align:center;margin-top:10px">Al confirmar no se cobra nada. Primero te mandamos el diseño.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL PEDIDO / SEGUIMIENTO ═══ -->
+<div class="md" id="md-ok">
+  <div class="mc">
+    <div class="mc-h"><h2>Tu pedido</h2><button class="x" onclick="cerrarOk()" aria-label="Cerrar">×</button></div>
+    <div class="mc-b">
+      <div class="trk">
+        <div class="trk-n" id="ok-num"></div>
+        <div class="trk-e">🎁</div>
+        <h3>¡Recibimos tu pedido!</h3>
+        <p>En menos de 24 horas te mandamos por WhatsApp el diseño digital de tus piezas. Cuando lo apruebes, te enviamos los datos para el anticipo.</p>
+        <div class="steps">
+          <div class="st on"><div class="d"></div><div class="l">Recibido</div></div>
+          <div class="st"><div class="d"></div><div class="l">Diseño aprobado</div></div>
+          <div class="st"><div class="d"></div><div class="l">En producción</div></div>
+          <div class="st"><div class="d"></div><div class="l">Listo / enviado</div></div>
+          <div class="st"><div class="d"></div><div class="l">Entregado</div></div>
+        </div>
+        <div class="anticipo-box"><b id="ok-ant"></b>Se paga solo después de que apruebes el diseño. El resto, al recibir.</div>
+        <a class="wa" id="ok-wa" href="#" target="_blank" rel="noopener">💬 Enviar mi pedido por WhatsApp</a>
+        <button class="btn btn-o" onclick="cerrarOk()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="mm" id="mm">
+  <button onclick="document.getElementById('mm').classList.remove('on')">Cerrar</button>
+  <a href="#regalos" onclick="document.getElementById('mm').classList.remove('on')">Regalos</a>
+  <a href="#como" onclick="document.getElementById('mm').classList.remove('on')">Cómo funciona</a>
+  <a href="#garantias" onclick="document.getElementById('mm').classList.remove('on')">Tu pago seguro</a>
+  <a href="#contacto" onclick="document.getElementById('mm').classList.remove('on')">Contacto</a>
+</div>
+
+<script>
+/* ⬇️ WhatsApp del negocio (52 + 10 dígitos). Ej: '523312345678' */
+const WHATSAPP = '523300000000';
+
+/* ═══ CATÁLOGO DEMO ═══ */
+const EV = {boda:'Boda', bautizo:'Bautizo', confirmacion:'Confirmación', empresarial:'Empresarial'};
+const catalog = [
+  {id:1, ev:'boda', name:'Vela aromática con etiqueta', price:48, min:24, dias:7, badge:'Más pedido', tipo:'nombres',
+   img:'https://images.unsplash.com/photo-1757688525739-8d1e13daf44f?w=800&q=80&auto=format&fit=crop',
+   desc:'Vela de soya en frasco de vidrio con etiqueta impresa: nombres, fecha y frase. Aroma a elegir.'},
+  {id:2, ev:'boda', name:'Copas grabadas para brindis', price:160, min:2, dias:5, badge:'', tipo:'nombres',
+   img:'https://images.unsplash.com/photo-1634832296440-b5bac2df86c3?w=800&q=80&auto=format&fit=crop',
+   desc:'Par de copas de cristal con grabado láser permanente. Ideal para el brindis de los novios.'},
+  {id:3, ev:'boda', name:'Mini detalle con tarjeta', price:35, min:50, dias:7, badge:'', tipo:'nombres',
+   img:'https://images.unsplash.com/photo-1592903297149-37fb25202dfa?w=800&q=80&auto=format&fit=crop',
+   desc:'Jabón artesanal envuelto en papel kraft con tarjeta personalizada y listón. Perfecto para mesas grandes.'},
+  {id:4, ev:'boda', name:'Caja de madera para padrinos', price:420, min:1, dias:8, badge:'', tipo:'nombres',
+   img:'https://images.unsplash.com/photo-1608755728617-aefab37d2edd?w=800&q=80&auto=format&fit=crop',
+   desc:'Caja de pino grabada con nombres y fecha, con interior forrado. Para pedir padrinos con estilo.'},
+  {id:5, ev:'bautizo', name:'Kit para padrinos de bautizo', price:380, min:2, dias:8, badge:'Favorito', tipo:'nombres',
+   img:'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=800&q=80&auto=format&fit=crop',
+   desc:'Caja con vela, tarjeta y detalle grabado con el nombre del bebé y la fecha. Un regalo para pedir y agradecer.'},
+  {id:6, ev:'bautizo', name:'Vela de bautizo con nombre', price:65, min:12, dias:6, badge:'', tipo:'nombres',
+   img:'https://images.unsplash.com/photo-1537948756265-406a522f1a45?w=800&q=80&auto=format&fit=crop',
+   desc:'Vela blanca larga con etiqueta dorada: nombre del bebé, fecha y una bendición corta.'},
+  {id:7, ev:'confirmacion', name:'Libreta con nombre y fecha', price:95, min:12, dias:6, badge:'', tipo:'nombres',
+   img:'https://images.unsplash.com/photo-1612367980327-7454a7276aa7?w=800&q=80&auto=format&fit=crop',
+   desc:'Libreta de pasta dura con el nombre del confirmado grabado en la portada. Un recuerdo que sí se usa.'},
+  {id:8, ev:'confirmacion', name:'Vela de confirmación con listón', price:58, min:12, dias:6, badge:'', tipo:'nombres',
+   img:'https://images.unsplash.com/photo-1570823635306-250abb06d4b3?w=800&q=80&auto=format&fit=crop',
+   desc:'Vela con etiqueta personalizada y listón en el color de la ceremonia.'},
+  {id:9, ev:'empresarial', name:'Termo grabado con logo', price:280, min:10, dias:10, badge:'Empresas', tipo:'logo',
+   img:'https://images.unsplash.com/photo-1588793076577-4c2b666452d3?w=800&q=80&auto=format&fit=crop',
+   desc:'Termo de acero inoxidable de 500 ml con tu logo grabado a láser. Con factura.'},
+  {id:10, ev:'empresarial', name:'Libreta ejecutiva con logo', price:150, min:20, dias:8, badge:'', tipo:'logo',
+   img:'https://images.unsplash.com/photo-1601001435957-74f0958a93fb?w=800&q=80&auto=format&fit=crop',
+   desc:'Libreta de pasta rígida con logo en bajo relieve y nombre opcional por empleado.'},
+  {id:11, ev:'empresarial', name:'Caja regalo corporativa', price:520, min:10, dias:12, badge:'', tipo:'logo',
+   img:'https://images.unsplash.com/photo-1674620213535-9b2a2553ef40?w=800&q=80&auto=format&fit=crop',
+   desc:'Caja premium con termo, libreta y tarjeta de agradecimiento, todo con la identidad de tu empresa.'},
+  {id:12, ev:'boda', name:'Caja de regalo con moño', price:120, min:12, dias:6, badge:'', tipo:'nombres',
+   img:'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&q=80&auto=format&fit=crop',
+   desc:'Caja para recuerdo con etiqueta impresa y moño. Tú eliges qué va adentro, nosotros la armamos.'},
+];
+const ACABADO_EXTRA = {madera:0, negro:0, blanco:0, salvia:6};
+const money = n => '$' + Math.round(n).toLocaleString('es-MX');
+const esc = s => String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+const MESES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+function fechaBonita(iso){
+  if(!iso) return '';
+  const [y,m,d] = iso.split('-').map(Number);
+  if(!y||!m||!d) return '';
+  return `${d} · ${MESES[m-1]} · ${y}`;
+}
+function descuento(q){ return q>=100 ? .10 : q>=50 ? .05 : 0; }
+
+/* ═══ DEMO DEDICATORIA (hero) ═══ */
+let demoAcab = 'madera';
+function demoPreview(){
+  document.getElementById('pd-n').textContent = document.getElementById('t-n').value.trim() || 'Tus nombres';
+  document.getElementById('pd-f').textContent = fechaBonita(document.getElementById('t-f').value) || 'Tu fecha';
+  document.getElementById('pd-p').textContent = document.getElementById('t-p').value.trim() || 'Tu frase';
+}
+function demoAcabado(btn){
+  document.querySelectorAll('.trial .sw').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on'); demoAcab = btn.dataset.a;
+  const p = document.getElementById('placa-demo');
+  p.className = 'placa ' + demoAcab;
+}
+
+/* ═══ CATÁLOGO ═══ */
+let filtro = 'todo';
+function renderGrid(){
+  const list = filtro==='todo' ? catalog : catalog.filter(p=>p.ev===filtro);
+  document.getElementById('grid').innerHTML = list.map(p=>`
+    <article class="card">
+      <div class="card-img">
+        <span class="card-ev">${EV[p.ev]}</span>
+        ${p.badge?`<span class="card-badge">${p.badge}</span>`:''}
+        <img src="${p.img}" alt="${esc(p.name)}" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3>${esc(p.name)}</h3>
+        <p>${esc(p.desc)}</p>
+        <div class="specs"><span>Mínimo <b>${p.min} ${p.min===1?'pza':'pzas'}</b></span><span>Elaboración <b>${p.dias} días</b></span></div>
+        <div class="card-foot">
+          <div class="price">${money(p.price)} <small>/ pza</small></div>
+          <button class="btn btn-p" onclick="abrirPz(${p.id})">Personalizar</button>
+        </div>
+      </div>
+    </article>`).join('');
+}
+function filtrar(ev, btn){
+  filtro = ev;
+  document.querySelectorAll('.f').forEach(b=>b.classList.remove('on'));
+  (btn || document.querySelector(`.f[data-e="${ev}"]`)).classList.add('on');
+  renderGrid();
+}
+function irEvento(ev){
+  filtrar(ev);
+  document.getElementById('regalos').scrollIntoView({behavior:'smooth'});
+}
+
+/* ═══ PERSONALIZAR ═══ */
+let pzProd = null;
+function abrirPz(id){
+  pzProd = catalog.find(p=>p.id===id);
+  document.getElementById('pz-title').textContent = pzProd.name;
+  document.getElementById('pz-img').src = pzProd.img;
+  document.getElementById('pz-img').alt = pzProd.name;
+  document.getElementById('pz-q').value = pzProd.min;
+  document.getElementById('pz-q').min = pzProd.min;
+  document.getElementById('pz-min').textContent = `Pedido mínimo: ${pzProd.min} ${pzProd.min===1?'pieza':'piezas'} · Elaboración: ${pzProd.dias} días hábiles`;
+  // Prefill con lo que escribió en el hero
+  document.getElementById('i-n').value = document.getElementById('t-n').value;
+  document.getElementById('i-f').value = document.getElementById('t-f').value;
+  document.getElementById('i-a').value = demoAcab;
+  document.getElementById('i-ps').value = 'Gracias por acompañarnos';
+  document.getElementById('i-p').style.display = 'none';
+  document.getElementById('i-p').value = '';
+  document.getElementById('i-notas').value = '';
+  // Campos según tipo
+  const esLogo = pzProd.tipo === 'logo';
+  document.getElementById('l-n').textContent = esLogo ? 'Nombre de la empresa' : 'Nombres';
+  document.getElementById('i-n').placeholder = esLogo ? 'Ej. Grupo Alfa' : 'Ej. Ana & Diego';
+  document.getElementById('w-f').style.display = esLogo ? 'none' : '';
+  if(esLogo){ document.getElementById('i-ps').value = 'Gracias por formar parte del equipo'; }
+  pzFrase(); pzPreview(); pzCalc();
+  document.getElementById('md-pz').classList.add('on');
+}
+function cerrarPz(){ document.getElementById('md-pz').classList.remove('on'); }
+function pzQty(d){
+  const i = document.getElementById('pz-q');
+  i.value = Math.max(pzProd.min, (parseInt(i.value)||pzProd.min) + d);
+  pzCalc();
+}
+function pzFrase(){
+  const sel = document.getElementById('i-ps'); const inp = document.getElementById('i-p');
+  if(sel.value==='custom'){ inp.style.display='block'; inp.focus(); } else { inp.style.display='none'; }
+  pzPreview();
+}
+function fraseActual(){
+  const sel = document.getElementById('i-ps');
+  return sel.value==='custom' ? document.getElementById('i-p').value.trim() : sel.value;
+}
+function pzPreview(){
+  const n = document.getElementById('i-n').value.trim();
+  const f = document.getElementById('i-f').value;
+  const a = document.getElementById('i-a').value;
+  const esLogo = pzProd && pzProd.tipo==='logo';
+  document.getElementById('pz-placa').className = 'placa ' + a;
+  document.getElementById('pz-n').textContent = n || (esLogo ? 'Tu empresa' : 'Tus nombres');
+  document.getElementById('pz-f').textContent = esLogo ? 'EDICIÓN CORPORATIVA' : (fechaBonita(f) || 'Tu fecha');
+  document.getElementById('pz-p').textContent = fraseActual() || 'Tu frase';
+}
+function pzCalc(){
+  let q = parseInt(document.getElementById('pz-q').value) || pzProd.min;
+  if(q < pzProd.min){ q = pzProd.min; }
+  const extra = ACABADO_EXTRA[document.getElementById('i-a').value] || 0;
+  const unit = pzProd.price + extra;
+  const d = descuento(q);
+  const total = unit * q * (1-d);
+  document.getElementById('pz-total').textContent = money(total);
+  document.getElementById('pz-desc').textContent = d ? `Descuento por volumen aplicado: ${d*100}% (${money(unit)} → ${money(unit*(1-d))} por pieza)`
+    : (q>=30 ? `Desde 50 piezas te aplica 5% de descuento.` : '');
+}
+let cart = [];
+function agregarAlPedido(){
+  let q = parseInt(document.getElementById('pz-q').value) || pzProd.min;
+  if(q < pzProd.min){ toast(`El mínimo para esta pieza es ${pzProd.min}`); document.getElementById('pz-q').value = pzProd.min; return; }
+  const n = document.getElementById('i-n').value.trim();
+  if(!n){ toast(pzProd.tipo==='logo' ? '⚠️ Escribe el nombre de la empresa' : '⚠️ Escribe los nombres'); return; }
+  const f = document.getElementById('i-f').value;
+  if(pzProd.tipo!=='logo' && !f){ toast('⚠️ Pon la fecha del evento'); return; }
+  const a = document.getElementById('i-a').value;
+  const unit = pzProd.price + (ACABADO_EXTRA[a]||0);
+  const d = descuento(q);
+  cart.push({ uid:Date.now()+Math.random(), pid:pzProd.id, q, n, f, a, frase:fraseActual(), notas:document.getElementById('i-notas').value.trim(), unit, d });
+  cerrarPz(); updateCart(); openCart();
+  toast(`✓ ${pzProd.name} · ${q} pzas agregadas`);
+}
+
+/* ═══ CARRITO ═══ */
+const ACAB = {madera:'Madera natural', negro:'Negro mate', blanco:'Blanco marfil', salvia:'Verde salvia'};
+function lineTotal(it){ return it.unit * it.q * (1-it.d); }
+function subtotal(){ return cart.reduce((s,it)=>s+lineTotal(it),0); }
+function updateCart(){
+  document.getElementById('cn').textContent = cart.reduce((s,it)=>s+it.q,0);
+  const b = document.getElementById('dr-b'), f = document.getElementById('dr-f');
+  if(!cart.length){ b.innerHTML = '<div class="empty">Tu pedido está vacío.<br>Elige un regalo y personalízalo.</div>'; f.style.display='none'; return; }
+  f.style.display='block';
+  b.innerHTML = cart.map(it=>{
+    const p = catalog.find(x=>x.id===it.pid);
+    return `<div class="ci">
+      <img src="${p.img}" alt="">
+      <div>
+        <div class="ci-n">${esc(p.name)}</div>
+        <div class="ci-p"><b>${esc(it.n)}</b>${it.f?` · ${esc(fechaBonita(it.f))}`:''}<br>"${esc(it.frase)}" · ${ACAB[it.a]}${it.d?` · <b>-${it.d*100}%</b>`:''}</div>
+        <div class="ci-q"><button onclick="cambiarQ('${it.uid}',-1)">−</button><span>${it.q}</span><button onclick="cambiarQ('${it.uid}',1)">+</button></div>
+      </div>
+      <div class="ci-r"><div class="ci-t">${money(lineTotal(it))}</div><button class="ci-x" onclick="quitar('${it.uid}')" aria-label="Quitar">×</button></div>
+    </div>`;
+  }).join('');
+  const s = subtotal();
+  document.getElementById('t-sub').textContent = money(s);
+  document.getElementById('t-ant').textContent = money(s/2);
+  document.getElementById('t-res').textContent = money(s/2);
+}
+function cambiarQ(uid, d){
+  const it = cart.find(x=>String(x.uid)===String(uid)); if(!it) return;
+  const p = catalog.find(x=>x.id===it.pid);
+  const nq = it.q + d;
+  if(nq < p.min){ toast(`Mínimo ${p.min} piezas para ${p.name}`); return; }
+  it.q = nq; it.d = descuento(nq); updateCart();
+}
+function quitar(uid){ cart = cart.filter(x=>String(x.uid)!==String(uid)); updateCart(); }
+function openCart(){ document.getElementById('ov').classList.add('on'); document.getElementById('dr').classList.add('on'); }
+function closeCart(){ document.getElementById('ov').classList.remove('on'); document.getElementById('dr').classList.remove('on'); }
+
+/* ═══ CHECKOUT ═══ */
+function abrirCheckout(){
+  if(!cart.length){ toast('Tu pedido está vacío'); return; }
+  closeCart();
+  const f = cart.find(it=>it.f); if(f) document.getElementById('c-fecha').value = f.f;
+  const evs = [...new Set(cart.map(it=>catalog.find(p=>p.id===it.pid).ev))];
+  if(evs.length===1) document.getElementById('c-ev').value = evs[0];
+  checkFecha(); renderResumen();
+  document.getElementById('md-co').classList.add('on');
+}
+function cerrarCheckout(){ document.getElementById('md-co').classList.remove('on'); }
+function segPick(group, btn){
+  document.querySelectorAll('#'+group+' button').forEach(b=>b.classList.remove('on')); btn.classList.add('on');
+  if(group==='seg-ent'){ document.getElementById('c-dir-wrap').style.display = btn.dataset.v==='taller' ? 'none' : 'block'; renderResumen(); }
+  if(group==='seg-pago'){
+    document.getElementById('pago-hint').textContent = btn.dataset.v==='transferencia'
+      ? 'Te enviamos la CLABE junto con el diseño para aprobar. Pagas cuando lo apruebes.'
+      : 'Te mandamos un link de pago seguro. Tu banco te protege con el contracargo.';
+  }
+}
+function segVal(g){ return document.querySelector('#'+g+' button.on'); }
+function diasMax(){ return Math.max(...cart.map(it=>catalog.find(p=>p.id===it.pid).dias)); }
+function checkFecha(){
+  const w = document.getElementById('c-warn'); const v = document.getElementById('c-fecha').value;
+  if(!v){ w.classList.remove('on'); return; }
+  const hoy = new Date(); hoy.setHours(0,0,0,0);
+  const ev = new Date(v+'T00:00:00');
+  const dias = Math.round((ev-hoy)/86400000);
+  const nec = diasMax() + 3; // producción + aprobación y entrega
+  if(dias < nec){
+    w.textContent = `Tu evento es en ${dias} día${dias===1?'':'s'} y este pedido necesita unos ${nec} para diseño, producción y entrega. Aun así puedes confirmarlo: te escribimos para ver si alcanzamos o ajustar la cantidad.`;
+    w.classList.add('on');
+  } else w.classList.remove('on');
+}
+function renderResumen(){
+  const env = parseInt(segVal('seg-ent').dataset.c)||0;
+  const s = subtotal(); const total = s + env;
+  document.getElementById('c-res').innerHTML = `
+    <div class="r"><span>${cart.reduce((a,it)=>a+it.q,0)} piezas en ${cart.length} regalo${cart.length>1?'s':''}</span><span>${money(s)}</span></div>
+    <div class="r"><span>Entrega</span><span>${env?money(env):'Gratis'}</span></div>
+    <div class="r b"><span>Total</span><span>${money(total)}</span></div>
+    <div class="r"><span>Anticipo al aprobar diseño (50%)</span><span>${money(total/2)}</span></div>
+    <div class="r"><span>Resto al recibir</span><span>${money(total/2)}</span></div>`;
+}
+function confirmarPedido(){
+  const nom = document.getElementById('c-nom').value.trim();
+  const tel = document.getElementById('c-tel').value.replace(/\D/g,'');
+  const fecha = document.getElementById('c-fecha').value;
+  const ent = segVal('seg-ent').dataset.v;
+  if(!nom || tel.length<10){ toast('⚠️ Pon tu nombre y un WhatsApp de 10 dígitos'); return; }
+  if(!fecha){ toast('⚠️ Indica la fecha del evento'); return; }
+  if(ent!=='taller' && !document.getElementById('c-calle').value.trim()){ toast('⚠️ Falta la dirección de entrega'); return; }
+
+  const num = Math.floor(Math.random()*900)+100;
+  const env = parseInt(segVal('seg-ent').dataset.c)||0;
+  const total = subtotal() + env;
+  const entTxt = {taller:'Recoger en taller', gdl:'A domicilio GDL', paq:'Paquetería nacional'}[ent];
+  const dir = ent!=='taller' ? `\nDirección: ${document.getElementById('c-calle').value.trim()}, ${document.getElementById('c-col').value.trim()}, ${document.getElementById('c-cd').value.trim()}` : '';
+  const lineas = cart.map(it=>{
+    const p = catalog.find(x=>x.id===it.pid);
+    return `• ${it.q}× ${p.name} (${ACAB[it.a]})\n   Nombres: ${it.n}${it.f?` · Fecha: ${fechaBonita(it.f)}`:''}\n   Frase: "${it.frase}"${it.notas?`\n   Notas: ${it.notas}`:''}`;
+  }).join('\n');
+  const msg = `*Pedido #${num} — Dedica*\n${lineas}\n\nEvento: ${document.getElementById('c-ev').selectedOptions[0].text} · ${fechaBonita(fecha)}\nEntrega: ${entTxt}${dir}\nPago anticipo: ${segVal('seg-pago').dataset.v}\n\nTotal: ${money(total)}\nAnticipo (50%): ${money(total/2)}\n\nNombre: ${nom}\nWhatsApp: ${tel}`;
+
+  document.getElementById('ok-wa').href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+  document.getElementById('ok-num').textContent = `Pedido #${num}`;
+  document.getElementById('ok-ant').textContent = `Anticipo: ${money(total/2)}`;
+  cerrarCheckout(); cart = []; updateCart();
+  document.getElementById('md-ok').classList.add('on');
+}
+function cerrarOk(){ document.getElementById('md-ok').classList.remove('on'); }
+
+/* ═══ VARIOS ═══ */
+function toast(m){ const t=document.getElementById('toast'); t.textContent=m; t.classList.add('on'); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('on'),2600); }
+document.querySelectorAll('.wa-link').forEach(a=>a.href=`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hola Dedica, quiero cotizar regalos personalizados.')}`);
+document.querySelectorAll('.md').forEach(m=>m.addEventListener('click',e=>{ if(e.target===m) m.classList.remove('on'); }));
+
+renderGrid(); updateCart(); demoPreview();
+</script>
+</body>
+</html>
